@@ -1,0 +1,2 @@
+total_facilities,hospitals,clinics,pharmacies,avg_distance_any_km,median_distance_any_km,max_distance_any_km,avg_distance_hospital_km,median_distance_hospital_km,coverage_1km_pct,coverage_2km_pct,coverage_5km_pct,coverage_10km_pct,underserved_area_pct,hospital_coverage_5km_pct
+1385,600,400,213,2.276464137851161,1.4821818179509578,10.367752400915531,2.467447575757109,1.7348407103527705,40.8,57.97,85.81,99.92999999999999,14.19,84.88

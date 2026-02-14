@@ -1,0 +1,208 @@
+
+======================================================================
+CHENNAI HEALTHCARE ACCESSIBILITY ANALYSIS
+Final Report
+======================================================================
+
+Generated: February 14, 2026
+Analyst: Griffin Jolly
+
+======================================================================
+EXECUTIVE SUMMARY
+======================================================================
+
+This analysis examines healthcare accessibility across Chennai by mapping
+1385 healthcare facilities and calculating distance metrics
+for 10,000 analysis points across the city.
+
+KEY FINDINGS:
+- 14.2% of Chennai's area is more than 5km from healthcare
+- Median distance to nearest facility: 1.48 km
+- Only 58.0% of areas are within 2km of a facility
+- Hospital access lags behind overall facility access
+
+======================================================================
+METHODOLOGY
+======================================================================
+
+Data Source: OpenStreetMap (OSM)
+Study Area: Chennai, Tamil Nadu, India
+Analysis Date: February 2026
+
+Facilities Mapped:
+  • Hospitals: 600
+  • Clinics: 400
+  • Pharmacies: 213
+  • Total: 1385
+
+Analysis Method:
+  • Created 100x100 grid (10,000 analysis points) across Chennai
+  • Calculated distance from each point to nearest facility using geospatial algorithms
+  • Used KDTree data structure for efficient nearest-neighbor searches
+  • Measured both straight-line (Euclidean) distances
+
+======================================================================
+DETAILED FINDINGS
+======================================================================
+
+1. DISTANCE METRICS
+
+Average distance to nearest healthcare facility: 2.28 km
+Median distance: 1.48 km
+Maximum distance (worst case): 10.37 km
+
+The median of 1.48 km suggests most residents have reasonable 
+access, but the maximum of 10.37 km indicates some areas face 
+significant barriers to healthcare access.
+
+2. COVERAGE ANALYSIS
+
+Area within 1km of healthcare: 40.8%
+Area within 2km of healthcare: 58.0%
+Area within 5km of healthcare: 85.8%
+Area within 10km of healthcare: 99.9%
+
+INTERPRETATION:
+- 42.0% of Chennai requires >2km travel for healthcare
+- At 2km (approximately 25-minute walk), this represents a significant barrier
+- Nearly universal coverage (99.9%) within 10km, but distance still matters
+
+3. HOSPITAL-SPECIFIC ACCESS
+
+Average distance to nearest hospital: 2.47 km
+Median distance to hospital: 1.73 km
+Area within 5km of hospital: 84.9%
+
+Hospital access is slightly worse than overall facility access, suggesting
+that hospitals are more centrally concentrated while clinics and pharmacies
+provide better peripheral coverage.
+
+4. UNDERSERVED AREAS
+
+14.2% of Chennai (1419 grid points) is more than 5km 
+from the nearest healthcare facility.
+
+Most underserved locations (furthest from healthcare):
+
+Top 10 Most Underserved Locations:
+  9901. Lat: 13.1618, Lon: 80.1147
+     Distance to nearest facility: 10.37 km
+     Nearest facility: MedPlus
+
+  9801. Lat: 13.1587, Lon: 80.1147
+     Distance to nearest facility: 10.25 km
+     Nearest facility: MedPlus
+
+  9902. Lat: 13.1618, Lon: 80.1167
+     Distance to nearest facility: 10.16 km
+     Nearest facility: MedPlus
+
+  9701. Lat: 13.1556, Lon: 80.1147
+     Distance to nearest facility: 10.13 km
+     Nearest facility: MedPlus
+
+  100. Lat: 12.8505, Lon: 80.3161
+     Distance to nearest facility: 10.12 km
+     Nearest facility: Sanjeevani Ayurvedic Hospital
+
+  9601. Lat: 13.1524, Lon: 80.1147
+     Distance to nearest facility: 10.03 km
+     Nearest facility: MedPlus
+
+  9802. Lat: 13.1587, Lon: 80.1167
+     Distance to nearest facility: 10.03 km
+     Nearest facility: MedPlus
+
+  99. Lat: 12.8505, Lon: 80.3140
+     Distance to nearest facility: 9.96 km
+     Nearest facility: Sanjeevani Ayurvedic Hospital
+
+  9903. Lat: 13.1618, Lon: 80.1187
+     Distance to nearest facility: 9.95 km
+     Nearest facility: MedPlus
+
+  9501. Lat: 13.1493, Lon: 80.1147
+     Distance to nearest facility: 9.95 km
+     Nearest facility: MedPlus
+
+
+======================================================================
+RECOMMENDATIONS
+======================================================================
+
+Based on this analysis, we recommend:
+
+1. IMMEDIATE ACTIONS:
+   • Investigate the 14.2% underserved areas for new facility placement
+   • Focus on regions >5km from current facilities
+   • Prioritize areas with high population density among underserved zones
+
+2. STRATEGIC PLANNING:
+   • Aim to increase 2km coverage from 58.0% to >75%
+   • Target locations that would serve multiple underserved grid points
+   • Consider mobile health clinics for extremely remote areas
+
+3. DATA QUALITY IMPROVEMENTS:
+   • Validate OSM data with government health department records
+   • Add population density data to weight accessibility metrics
+   • Include public transportation routes for more realistic travel times
+
+4. FUTURE ANALYSIS:
+   • Compare accessibility with actual health outcomes
+   • Analyze temporal patterns (facility operating hours)
+   • Assess capacity and quality, not just location
+
+======================================================================
+LIMITATIONS
+======================================================================
+
+- Data completeness depends on OpenStreetMap contributor activity
+- Analysis uses straight-line distance, not actual travel routes
+- Does not account for facility capacity, quality, or specialization
+- Grid-based analysis may not perfectly represent population distribution
+- Some facilities may be missing or misclassified in OSM
+
+======================================================================
+CONCLUSION
+======================================================================
+
+Chennai demonstrates reasonable healthcare coverage overall, with a median
+distance of 1.48 km to the nearest facility. However, 14.2%
+of the city's area remains underserved (>5km from healthcare), representing
+a significant equity concern.
+
+The concentration of hospitals in central areas while clinics provide better
+peripheral coverage suggests opportunities for targeted intervention. Strategic
+placement of just a few new facilities in identified underserved zones could
+dramatically improve overall accessibility metrics.
+
+This analysis provides a data-driven foundation for healthcare planning
+decisions and can be replicated for other cities to identify and address
+healthcare access gaps.
+
+======================================================================
+TECHNICAL DETAILS
+======================================================================
+
+Tools & Libraries Used:
+  • Python 3.x
+  • pandas (data manipulation)
+  • geopandas (geospatial analysis)
+  • scipy (KDTree for efficient distance calculations)
+  • folium (interactive mapping)
+  • matplotlib/seaborn (visualization)
+
+Data Processing Pipeline:
+  1. Data collection from OpenStreetMap via Overpass API
+  2. Data cleaning and categorization
+  3. Grid generation for spatial analysis
+  4. Distance calculation using KDTree algorithm
+  5. Statistical analysis and visualization
+  6. Interactive map generation
+
+Repository: https://github.com/GriffinJolly/healthcare-mapping
+
+
+======================================================================
+END OF REPORT
+======================================================================

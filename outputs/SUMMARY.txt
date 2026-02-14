@@ -1,0 +1,11 @@
+
+CHENNAI HEALTHCARE ACCESSIBILITY - QUICK SUMMARY
+
+Total Facilities Analyzed: 1385
+Median Distance to Healthcare: 1.48 km
+Underserved Areas (>5km): 14.2%
+Coverage within 2km: 58.0%
+
+Key Insight: While most of Chennai has reasonable healthcare access,
+14.2% of the city is significantly underserved, with some
+areas up to 10.4 km from the nearest facility.
